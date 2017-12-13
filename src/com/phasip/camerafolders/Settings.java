@@ -127,7 +127,7 @@ public class Settings {
 	}
 
 	private void loadSettings() {
-		sdCardFile = Environment.getExternalStorageDirectory();
+		sdCardFile = new File("/storage/4122-18ED");
 		mPrefs = a.getSharedPreferences(PREFS_NAME, Activity.MODE_PRIVATE);
 		defaultFolder = new File(mPrefs.getString(DEFAULT_FOLDER, sdCardFile.getAbsolutePath()));
 		if (!defaultFolder.exists())
